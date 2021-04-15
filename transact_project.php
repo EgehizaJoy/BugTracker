@@ -32,7 +32,7 @@ $users=$_POST['projectusers'];
          ('$email_array[$i]','".$_SESSION['$project_id']."')";
          $result = $conn->prepare($sql);
          $result->execute();
-    
+          header('Location: newProjectprojects.php');
     }
   }
 }
