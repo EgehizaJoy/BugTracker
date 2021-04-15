@@ -7,12 +7,12 @@ $users=$_POST['projectusers'];
  if(empty($name)){
  session_start();
  $_SESSION['project_error']="Project name was not inserted";
- header('Location: newProjectprojects.php');  
+ header('Location: newProject.php');  
  }
  else if(empty($users)){
  session_start();
  $_SESSION['project_error']="Members were not inserted";
- header('Location: newProjectprojects.php'); 
+ header('Location: newProject.php'); 
   }
   else
     {
@@ -32,7 +32,7 @@ $users=$_POST['projectusers'];
          ('$email_array[$i]','".$_SESSION['$project_id']."')";
          $result = $conn->prepare($sql);
          $result->execute();
-          header('Location: newProjectprojects.php');
+          header('Location: projects.php');
     }
   }
 }
